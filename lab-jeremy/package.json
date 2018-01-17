@@ -1,0 +1,32 @@
+{
+  "name": "03-async-callbacks",
+  "version": "1.0.0",
+  "description": "Parallel file processing",
+  "main": "reader.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpjazzy/03-async-callbacks.git"
+  },
+  "keywords": [
+    "parallel",
+    "file",
+    "processing",
+    "test",
+    "jest"
+  ],
+  "author": "Jeremy Pearson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpjazzy/03-async-callbacks/issues"
+  },
+  "homepage": "https://github.com/jpjazzy/03-async-callbacks#readme",
+  "devDependencies": {
+    "jest": "^22.1.2"
+  }
+}
