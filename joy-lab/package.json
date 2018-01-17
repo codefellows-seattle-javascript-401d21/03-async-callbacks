@@ -1,0 +1,19 @@
+{
+  "name": "03-async-callbacks",
+  "version": "1.0.0",
+  "description": "Parallel File Proessing",
+  "main": "lib/reader.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint ."
+  },
+  "author": "Joy Hou",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "jest": "^22.1.2"
+  }
+}
