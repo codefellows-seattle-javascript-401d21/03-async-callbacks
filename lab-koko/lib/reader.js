@@ -1,15 +1,15 @@
 'use strict';
 
-const fs = require('fs');
+const reader = require('fs');
 
-fs.readFile(`${__dirname}/assets/one.html`, (err, data) => {
+reader.readFile(`${__dirname}/assets/one.html`, (err, data) => {
   if(err) console.error(err);
-  let buffer = data
+  let buffer = data;
   let fd = data.toString();
   let hex = data.toString('hex');
-  let tim = hex * 3 // will return NaN
+  let tim = hex * 3; // will return NaN
 
   // some manipulation or aggregation of the data, buffer or otherwise
 
-  fs.writeFile(`${__dirname}/data/new.html`, buffer + fd +, err => err ? console.error(err) : undefined)
+  reader.writeFile(`${__dirname}/data/new.html`, buffer + fd + tim, err => err ? console.error(err) : undefined);
 }); 
