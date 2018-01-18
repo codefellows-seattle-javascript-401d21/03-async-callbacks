@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/stevegcarpenter/03-async-callbacks/issues"
   },
-  "homepage": "https://github.com/stevegcarpenter/03-async-callbacks#readme"
+  "homepage": "https://github.com/stevegcarpenter/03-async-callbacks#readme",
+  "dependencies": {
+    "jest": "^22.1.2"
+  }
 }
