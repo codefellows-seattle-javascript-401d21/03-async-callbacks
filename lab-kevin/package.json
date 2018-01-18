@@ -1,0 +1,23 @@
+{
+  "name": "lab-kevin",
+  "version": "0.0.0",
+  "description": "03-async-callbacks lab that reads three files using an array of file paths and returns the data in the same order as the file paths in the array. ",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "jest",
+    "fs",
+    "async",
+    "poe"
+  ],
+  "author": "Kevin Miller",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.2"
+  }
+}
