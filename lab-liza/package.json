@@ -7,11 +7,14 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "author": "Liza Oh",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^4.15.0",
+    "fs": "0.0.1-security",
     "jest": "^22.1.2"
   }
 }
