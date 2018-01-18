@@ -15,7 +15,7 @@ describe('Reader Module', () => {
       });
     });
 
-    it('should return undefined data when one or more filepaths is invalid', (done) => {
+    it('should return undefined data when one or more filepaths are invalid', (done) => {
       reader.readFiles(['../assets/foo.txt'], (err, data) => {
         if (err) console.log(err);
         expect(data).toBe(undefined);
