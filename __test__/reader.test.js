@@ -1,6 +1,6 @@
 'use strict';
 
-const myFs = require('../lib/filesystem.js');
+const myFs = require('../lib/reader.js');
 require('jest');
 
 describe('File System Lib', function() {
