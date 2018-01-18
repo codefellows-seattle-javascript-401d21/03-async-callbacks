@@ -1,0 +1,17 @@
+{
+  "name": "lab-melanie",
+  "version": "1.0.0",
+  "description": "03-async-callbacks",
+  "main": "reader.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "melanie",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.1.2"
+  }
+}
