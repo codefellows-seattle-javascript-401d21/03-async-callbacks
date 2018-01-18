@@ -1,18 +1,13 @@
 'use strict'
 
-const reader = requires('../lib/reader')
+const reader = require('../lib/reader')
 
 describe('Reader Module', function(){
-    it('should take in a filepath, read the file, parse into a string and map it to an array, () => {
-    expect(greet(1)).toEqual(null);
-    expect(greet('world')).toEqual('hello world');
+    it('should take in three filepaths, read the files, parse into a string and map them to an array', (done) => {
+        reader.doAThingAsyn(data, (err, fd) => {
+            if(err) console.log(err)
+            expect(fd).toBe(true)
+            done()
+        })
     })
 });
-
-
-## Testing
-#### Reader Module Tests
-* Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
-* Each `test` callback should aim to test a small well defined feature of a function
-* Write tests to ensure the reader function rejects errors with invalid file paths
-* Write tests to ensure the reader function correctly resolves mapped string data for an array of file paths

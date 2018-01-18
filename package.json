@@ -21,6 +21,7 @@
     "eslint-config-google": "^0.9.1"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "jest": "^22.1.2"
   }
 }
