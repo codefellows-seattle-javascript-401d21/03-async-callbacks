@@ -7,8 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --verbose",
-    "test:watch": "jest --watch",
+    "test": "jest",
     "start": "index.js",
     "start:debug": "",
     "start:watch": ""
