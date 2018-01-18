@@ -35,7 +35,10 @@ describe('reader module', function () {
       });
     });
     it('should throw an error if the input is not valid path', function () {
-     
+      return reader(arrayTwo, (err, fd) => {
+        if (err) console.error(err);
+        expect(reader()).toThrowError();
+      });
     });
   });
 });
