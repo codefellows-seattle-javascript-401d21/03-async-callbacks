@@ -1,3 +1,4 @@
+'use strict';
 
 const reader = require(`${__dirname}/../lib/reader`);
 
@@ -35,6 +36,7 @@ describe('reader', () => {
       data = data.map(val=>`${test_assetsDir}${val}`);
       console.log('5', data);
       console.log('filePaths', thesePaths);
+      console.log(filePaths);
       expect(data.toString()).toEqual(thesePaths.toString());
       done();
     });
