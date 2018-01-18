@@ -20,11 +20,11 @@ describe('Reader Module', function() {
       });
     });
 
-    it('expects the reader module to be an object', function() {
+    it('expects the reader module to return null when given an empty string', function() {
       expect(solution('')).toBe(null);
     });
 
-    it('expects the reader module to not have an empty array', function() {
+    it('expects the reader module to only take in arrays', function() {
       expect(solution(0)).toBe(null);
     });
 
