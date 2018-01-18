@@ -2,11 +2,9 @@
 
 const fs = require('fs')
 
-// let paths = [`${__dirname}/data/one.html`, `${__dirname}/data/two.html`, `${__dirname}/data/three.html`]
 let mappedFiles = []
-let paths = []
 
-exports.mapFiles = function(error, callback) {
+exports.mapFiles = function(paths, callback) {
   if (paths.length === 0) return null
   let i = 0
   fs.readFile(paths[i], (error, data) => {
