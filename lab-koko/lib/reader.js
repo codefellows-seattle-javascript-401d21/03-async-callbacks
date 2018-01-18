@@ -11,5 +11,5 @@ fs.readFile(`${__dirname}/assets/one.html`, (err, data) => {
 
   // some manipulation or aggregation of the data, buffer or otherwise
 
-  fs.writeFile(`${__dirname}/data/new.html`, tim, err => err ? console.error(err) : undefined)
+  fs.writeFile(`${__dirname}/data/new.html`, buffer + fd +, err => err ? console.error(err) : undefined)
 }); 
