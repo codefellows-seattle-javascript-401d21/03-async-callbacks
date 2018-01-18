@@ -3,19 +3,22 @@ const fs = require('fs');
 
 exports.read = (paths, callback, res) => {
     if (!res) res = [];
-    if (!paths[0]) return callback(null, res);
-    else {
-        fs.readFile(paths.shift(), (err, data) => {
-            if (err) console.error(err);
-            res.push(data.toString());
-            return exports.read(paths, callback, res);
-        });
+    if (!Array.isArray(paths)) {
+        callback('ERROR: Paths argument is not an array');
+        return;
     }
-}
 
-let someVar = exports.read([`${__dirname}/../assets/tacos.html`, `${__dirname}/../assets/burritos.html`, `${__dirname}/../assets/quesadillas.html`], (err, data) => {
-    if (err) console.error(err);
-    console.log(data);
-    return data;
-});
-console.log(someVar); // why does it return undefined?
+    if (!paths[0] && res[0]) {
+        callback(null, res);
+        return;
+    }
+    else if (!paths[0] && !res[0]) {
+        callback('ERROR: Paths argument is an empty array');
+        return;
+    }
+    fs.readFile(paths.shift(), (err, data) => {
+        if (err) callback(err);
+        res.push(data.toString());
+        exports.read(paths, callback, res);
+    });
+};
