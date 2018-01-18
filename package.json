@@ -2,12 +2,13 @@
   "name": "03-async-callbacks",
   "version": "1.0.0",
   "description": "lab async callbacks",
-  "main": "index.js",
+  "main": "filesystem.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint test.js"
   },
   "repository": {
     "type": "git",
