@@ -1,8 +1,13 @@
+'use strict';
+
 const fs = require('fs');
 
-module.exports = (path_array, data_callback) => {
+module.exports = (paths, data_callback) => {
+  if( ! Array.isArray(paths)) return data_callback('not array', null);
+  if(!paths.length) return data_callback(null, null);
+  
   let results = [];
-  readFile(path_array, readFile);
+  readFile([...paths], readFile);
   
   function readFile(path_array, callback){
     if(!path_array.length) return data_callback(null, results);
