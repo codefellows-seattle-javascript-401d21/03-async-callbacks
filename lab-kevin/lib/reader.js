@@ -14,6 +14,3 @@ module.exports = (path_array, data_callback) => {
   }
 
 };
-
-
-
