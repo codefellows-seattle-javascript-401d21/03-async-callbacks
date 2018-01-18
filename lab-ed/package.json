@@ -9,13 +9,14 @@
   "scripts": {
     "test": "jest --verbose",
     "test:watch": "jest --watch",
-    "start": "nodemon index.js",
+    "start": "index.js",
     "start:debug": "",
     "start:watch": ""
   },
   "author": "Ed",
   "license": "MIT",
   "dependencies": {
-    "jest": "^22.1.1"
+    "fs": "0.0.1-security",
+    "jest": "^22.1.2"
   }
 }
