@@ -12,9 +12,13 @@ const fs = require('fs');
 //   });
 // };
 let paths = [`${__dirname}/../assets/first.html`, `${__dirname}/../assets/second.html`, `${__dirname}/../assets/third.html`];
-
+// let paths = 123;
 
 module.exports = function(paths) {
+  if (!Array.isArray(paths) || paths.length !== 3) {
+    console.log('enter valid array');
+    return null;
+  }
   let result = [];
   fs.readFile(paths[0], (err, data) => {
     if(err) console.error(err);
