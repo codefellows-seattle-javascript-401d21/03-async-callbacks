@@ -1,0 +1,17 @@
+{
+  "name": "lab-liza",
+  "version": "1.0.0",
+  "description": "Lab 3: Parallel File Processing",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Liza Oh",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.1.2"
+  }
+}
