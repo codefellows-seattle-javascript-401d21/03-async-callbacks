@@ -12,7 +12,10 @@ const reader = (pathsArr, cb) => {
   fs.readFile(`${__dirname}/${filePath}`, `utf8`, (err, data) => {
     fileContents.push(data.toString());
     if (pathsArr.length !== 0) reader(pathsArr, cb);
-    else cb(null, fileContents);
+    else { 
+      console.log(cb(null, fileContents)); 
+      console.log(cb.toString());
+    };
   });
 };
 
