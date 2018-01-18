@@ -18,14 +18,15 @@ module.exports = function(paths) {
   let result = [];
   fs.readFile(paths[0], (err, data) => {
     if(err) console.error(err);
-    result.push(data.toString('utf-8'));
+    result.push(data.toString());
     fs.readFile(paths[1], (err, data) => {
       if(err) console.error(err);
-      result.push(data.toString('utf-8'));
+      result.push(data.toString());
       fs.readFile(paths[2], (err, data) => {
         if(err) console.error(err);
-        result.push(data.toString('utf-8'));
-        console.log(result);
+        result.push(data.toString());
+        // console.log(result);
+        // callback(err, result);
       });
     });
   });
