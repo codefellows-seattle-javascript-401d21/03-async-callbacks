@@ -4,6 +4,15 @@
 
 Reader has one native method that reads a list of files from an array of paths and returns each of the files contents in an array with the same index as the the corresponding path array   Reader has an arity of 2 and expects an array of file paths and callbacks.  The array of file paths length can be 1 or more. can The callback must accept two arguments, error and data. ((err, data => {do something}) If there is an error reading any of the files, the resulting data will br null.  
 
+- usuage:
+
+```
+const reader = require(`${__dirname}/lib/reader`);
+
+reader([file-path1, file_path2, ...], (err, data) => {} );
+
+```
+
 
 ## Development Tests
 
