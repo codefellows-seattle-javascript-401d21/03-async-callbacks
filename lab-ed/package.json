@@ -1,0 +1,21 @@
+{
+  "name": "lab-ed",
+  "version": "1.0.0",
+  "description": "Async callbacks",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "start": "nodemon index.js",
+    "start:debug": "",
+    "start:watch": ""
+  },
+  "author": "Ed",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^22.1.1"
+  }
+}
