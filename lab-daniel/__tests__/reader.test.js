@@ -13,17 +13,19 @@ describe('Reader Module', function(){
       expect(reader.readWrite([1, 1, 1])).toBe(null);
       expect(reader.readWrite(['../assets/file01.txt', 3, 5])).toBe(null);
     });
-    it('reads files passed into reader', function(){
-      return reader.readWrite(['../assets/file01.txt', '../assets/file02.txt', '../assets/file03.txt'], (err, fd) => {
+    it('reads files passed into reader', function(done){
+      reader.readWrite(['../assets/file01.txt', '../assets/file02.txt', '../assets/file03.txt'], (err, fd) => {
         if (err) console.error('test 1', err);
-        expect(fd).toBe(true);
+        expect(fd).toBeTruthy();
+        done();
       });
     });
-    it('writes the files into the correct order when presented with a valid input', function(){
-      return reader.readWrite(['../assets/file03.txt', '../assets/file01.txt', '../assets/file02.txt'], (err, fd) => {
+    it('writes the files into the correct order when presented with a valid input', function(done){
+      reader.readWrite(['../assets/file03.txt', '../assets/file01.txt', '../assets/file02.txt'], (err, fd) => {
         if (err) console.error('test 2', err);
         fd = fd.map(v => v.slice(0, 7));
-        expect(fd).toBe(['File 03', 'File 01', 'File 02']);
+        expect(fd).toEqual(['File 03', 'File 01', 'File 02']);
+        done();
       });
     });
   });
