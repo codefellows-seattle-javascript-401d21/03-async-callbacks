@@ -3,19 +3,29 @@
 const reader = module.exports = {};
 const fs = require('fs');
 
-let lorem = [`${__dirname}/../assests/red.html`, `${__dirname}/../assests/green.html`, `${__dirname}/../assests/blue.html`];
+let lorem = [`../assets/red.html`, `../assets/green.html`, `../assets/blue.html`];
 
 reader.newLorem = function(arr) {
+  if(!arr || Array.isArray(arr) === false) return null;
   for(let i in arr) {
-    fs.readFile(`${arr[i]}`, (error, data) => {
-      if(err) console.error(err);
-      let fd = data.toString();
-      console.log(fd);
-
-      fs.writeFile(`${__dirname}/../assets/new.html`, err => err ? console.error(err) : undefined);
-
-    });
+    if(typeof arr[i] !== 'string') return null;
   }
+  let newFile = [];
+  fs.readFile(`${__dirname}/${arr[0]}`, (err, data) => {
+
+    if(err) console.error(err);
+    newFile.push(data.toString());
+    fs.readFile(`${__dirname}/${arr[1]}`, (err, data) => {
+
+      if(err) console.error(err);
+      newFile.push(data.toString());
+      fs.readFile(`${__dirname}/${arr[2]}`, (err, data) => {
+
+        if(err) console.error(err);
+        newFile.push(data.toString());
+      });
+    });
+  });
 };
 
 reader.newLorem(lorem);
