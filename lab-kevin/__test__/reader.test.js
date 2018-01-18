@@ -25,29 +25,17 @@ describe('reader', () => {
     });  
   });
 
-  test('Test 4: reader returns an array in the correct order', (done) => {
+  test('Test 4: reader returns an array in the correct order', done => {
     const filePaths = [ `${test_assetsDir}1_test.txt`,
       `${test_assetsDir}2_test.txt`,
       `${__dirname}/test_assets/3_test.txt` ];
-    
-    reader(filePaths, (err, data) =>{
-      if (err) console.error(err);
-      data = data.map(val=>`${test_assetsDir}${val}`);
-      console.log('data');
-      expect(data).toBeInstanceOf(Array);
-      done();
-    });
-  });
-
-  test('Test 5: reader returns an array in the correct order', done => {
-    const filePaths = [ `${test_assetsDir}1_test.txt`,
-      `${test_assetsDir}2_test.txt`,
-      `${__dirname}/test_assets/3_test.txt` ];
-    
+    let thesePaths = filePaths.slice();
     reader(filePaths, (err, data) => {
       if (err) console.error(err);
+      data = data.map(val=>`${test_assetsDir}${val}`);
       console.log('5', data);
-      expect(data).toBeInstanceOf(Array);
+      console.log('filePaths', thesePaths);
+      expect(data.toString()).toEqual(thesePaths.toString());
       done();
     });
   });
