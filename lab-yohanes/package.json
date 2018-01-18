@@ -1,0 +1,23 @@
+{
+  "name": "lab-yohanes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reader.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint reader.test.js"
+  },
+  "keywords": [
+    "node",
+    "installment",
+    "ready"
+  ],
+  "author": "yohanes",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.1.2"
+  }
+}
