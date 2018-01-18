@@ -1,0 +1,19 @@
+{
+  "name": "03-async-callbacks",
+  "version": "1.0.0",
+  "description": "Lab 3 - Async callbacks",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevegcarpenter/03-async-callbacks.git"
+  },
+  "author": "Steve Carpenter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevegcarpenter/03-async-callbacks/issues"
+  },
+  "homepage": "https://github.com/stevegcarpenter/03-async-callbacks#readme"
+}
