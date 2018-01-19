@@ -1,32 +1,42 @@
 'use strict';
 
-module.exports = {};
+const reader = module.exports = {};
 
 const fs = require('fs');
 
+reader.read = function(pathname, cb) {
 //create an array of three filepaths
-let filepaths = [`/../assets/bob.html`, `/../assets/queen.html`, `/../assets/sj.html`];
+  let filepath = [];
+  console.log('here');
+  let one = filepath[0];
+  let two = filepath[1];
+  let three = filepath[2];
+  let dn = `${__dirname}/../assets/`
+  let results = [];
 
-let strArr = [];
-let dn = `${__dirname}`;
-
-fs.readFile(dn+filepaths[0], (err, data) => {
-  if(err) console.error(err);
-
-  fs.readFile(dn+filepaths[1], (err, data) => {
-    if(err) console.error(err);
-
-    fs.readFile(dn+filepaths[2], (err, data) => {
-      if(err) console.error(err);
-
-      strArr.push(data.toString());
-      // console.log('result', strArr);
-      return strArr
+fs.readFile(dn+one, (err, data) => {
+    if(err) {
+      console.error(err);
+      return cb(err)
+    }
+    results.push(data.toString());
+    console.log('result1', results);
+    fs.readFile(dn+two, (err, data) => {
+      if(err) {
+        console.error(err);
+        return cb(err)
+      }
+      results.push(data.toString());
+      console.log('result2', results);
+      fs.readFile(dn+three, (err, data) => {
+        if(err) {
+          console.error(err);
+          return cb(err)
+        }
+        results.push(data.toString());
+        console.log('result3', results);
+        return cb(null, results)
+      });
     });
-
-    strArr.push(data.toString());
-
   });
-  strArr.push(data.toString());
-
-});
+}
