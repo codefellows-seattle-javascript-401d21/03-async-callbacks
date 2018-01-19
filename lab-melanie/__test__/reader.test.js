@@ -27,5 +27,12 @@ describe('Reader Module', function() {
         expect(fd).toBe('**1**', '**2**', '**3**');
       });
     });
+    // *****new test to check for correct file path***** //
+    it('should return undefined if a file path is invalid', () => {
+      return reader.newLorem([`../assets/red.html`, `../assets/notred.html`], (err, fd) => {
+        if(err) console.error(err);
+        expect(fd).toBe(undefined);
+      });
+    });
   });
 });
