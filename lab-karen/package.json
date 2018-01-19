@@ -1,0 +1,17 @@
+{
+  "name": "03-async",
+  "version": "1.0.0",
+  "description": "day 3 lab about asynchronous processing",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karen Perez",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.3"
+  }
+}
