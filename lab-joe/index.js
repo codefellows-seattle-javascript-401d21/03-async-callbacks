@@ -2,15 +2,17 @@
 
 const reader = require('./lib/reader');
 
-// reader.reading();
+let arrayList = [`${__dirname}/lib/2.txt`,`${__dirname}/lib/1.txt`,`${__dirname}/lib/0.txt`];
+
+
+reader.recursiveRead(arrayList, function(){console.log('done')});
 
 
 
-let arrayList = [`${__dirname}/lib/2.html`,`${__dirname}/lib/1.html`,`${__dirname}/lib/0.html`];
+let look = function(hello){
 
 
+if(hello){ return null }
 
-reader.recursiveRead(arrayList, function(){
-    console.log(reader.fileArr.toString());
-});
 
+}

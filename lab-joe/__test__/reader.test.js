@@ -1,24 +1,33 @@
 'use strict';
 
 const reader = require('../lib/reader');
-require('jest'); // This is not required
 
+describe('reader.test.js', () => {
 
-describe('reader module', function() {
-  describe('#reader', function() {
-    it('test if input is an array', function() {
-      expect(reader.recursiveRead(123)).toEqual(null);
+  describe('testing invalid paths for reader.recursiveRead', () => {
+    test('error if path to one.txt is invalid', done => {
+      reader.recursiveRead([`${__dirname}/../assets/on1234`, `${__dirname}/../assets/two.txt`, `${__dirname}/../assets/three.txt`], (error) => {
+        expect(error).not.toBeNull();
+        done();
+      });
     });
+    test('error if path to two.txt is invalid', done => {
+      reader.recursiveRead([`${__dirname}/../assets/one.txt`, `${__dirname}/../assets/sacjlk`, `${__dirname}/../assets/three.txt`], (error) => {
+        expect(error).not.toBeNull();
+        done();
+      });
+    });
+    test('error if path to three.txt is invalid', done => {
+      reader.recursiveRead([`${__dirname}/../assets/one.txt`, `${__dirname}/../assets/two.txt`, `${__dirname}/../assets/3333`], (error) => {
+        expect(error).not.toBeNull();
+        done();
+      });
+    });
+  });
 
-    it('test if array is not null', function() {
-      expect(reader.recursiveRead([])).toEqual(null);
-   });
-
-
-
+  describe('testing invalid input for array in reader.recursiveRead', () => {
+    test('function should throw error if not given an array', () => {
+      expect(() => reader.recursiveRead('asdc;jh')).toThrow();
+    });
   });
 });
-
-
-
-
