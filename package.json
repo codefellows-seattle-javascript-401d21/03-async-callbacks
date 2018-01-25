@@ -1,0 +1,29 @@
+{
+  "name": "03-async-callbacks",
+  "version": "1.0.0",
+  "description": "![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 03: Parallel File Processing ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montgomeryrd/03-async-callbacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montgomeryrd/03-async-callbacks/issues"
+  },
+  "homepage": "https://github.com/montgomeryrd/03-async-callbacks#readme",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jest": "^22.1.2"
+  }
+}
