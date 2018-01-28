@@ -1,0 +1,23 @@
+{
+  "name": "lab-daniel",
+  "version": "1.0.0",
+  "description": "lab 03 for daniel logerstedt",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "keywords": [
+    "jest",
+    "async-callbacks",
+    "filesystem"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.2"
+  },
+  "dependencies": {}
+}
