@@ -1,33 +1,36 @@
-'use strict'
+'use strict';
 
 const fs = require('fs');
 
 function mapping(pathsArr, callback){
-   	let mappedArr = [];
+  let [one, two, three] = pathsArr;
+  let mappedArr = [];
 	
-	for(let i = 0; i < pathsArr.length; i++){
-		try {  
-			var data = fs.readFileSync(pathsArr[i], 'utf8');
-			mappedArr.push(data);
-		} catch(err) {
-			callback(err);
-			return;
-		}
-	}
+  // read file one and push it to mappedArr
+  fs.readFile(one, (err, data) => {
+    if(err){
+      return callback(err);
+    }
+    mappedArr.push(data.toString());
 
-	for(let i = 0; i < mappedArr.length; i++){
-		callback(null, mappedArr[i]);
-	}
+    fs.readFile(two, (err, data) => {
+      if(err){
+        return callback(err);
+      }
+      mappedArr.push(data.toString());
+
+      fs.readFile(three, (err, data) => {
+        if(err){
+          return callback(err);
+        }
+        mappedArr.push(data.toString());
+
+        return callback(null, mappedArr);
+
+      });
+    });
+  });
 }
 
 module.exports = mapping;
 
-/*
-mapping(['../assets/string_one.txt', '../assets/string_two.tx', '../assets/string_three.txt'], (err, data) => {
-	if(err){
-		console.error('invalid file path');
-		return;//throw new Error('Not valid file path!');
-	} else {
-		console.log(data);
-	}
-});*/
