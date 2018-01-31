@@ -1,0 +1,17 @@
+{
+  "name": "lab-jesus",
+  "version": "1.0.0",
+  "description": "scans 3 files then saves them in order",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Jesus",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^22.1.2"
+  }
+}
