@@ -5,9 +5,6 @@ require('jest');
 
 let pathArray = [`${__dirname}/../data/one.html`,`${__dirname}/../data/two.html`,`${__dirname}/../data/three.html`];
 
-
-'use strict';
-
 const solution = require('../lib/reader');
 require('jest');
 
@@ -24,23 +21,6 @@ describe('Reader Module', function() {
         done();
       });
     });
-
-    // work in progress to test if there is a valid file path
-
-    // it('expects the reader module not be a valid file path', function() {
-    //   expect(solution(arrayTwo)).toBe('not a valid file path');
-    // });
-
-    // it('expects var one to equal one.txt', (done) => {
-    //   solution(arrayTwo, (err, fd) => {
-    //     if(err) console.log(err);
-    //     expect(fd[0]).toBe(one);
-    //     expect(fd[1]).toBe(two);
-    //     expect(fd[2]).toBe(three);
-    //     done();
-    //   });
-    // });
-
     it('expects the reader module to not take non-array items', function() {
       expect(solution('')).toBe(null);
     });
