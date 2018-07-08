@@ -1,0 +1,15 @@
+{
+  "name": "lab-ender",
+  "version": "1.0.0",
+  "description": "async file reader",
+  "main": "./module/reader.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint"
+  },
+  "author": "Ender Smith",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.1.2"
+  }
+}
