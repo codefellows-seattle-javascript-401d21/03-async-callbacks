@@ -1,0 +1,19 @@
+{
+  "name": "lab-jordan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "jest": "^22.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint . --ext .js"
+  },
+  "author": "",
+  "license": "ISC"
+}
