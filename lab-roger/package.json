@@ -1,0 +1,20 @@
+{
+  "name": "async-callbacks",
+  "version": "1.0.0",
+  "description": "creates a reder file that takes an array with 3 file paths and reades the respective files into an array",
+  "main": "reder.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "author": "rnd",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.3"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
